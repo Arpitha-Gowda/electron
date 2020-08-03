@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Brower two App</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+  </head>
+  <body>
+    <h1>Hello Brower two!</h1>
+    <ol id="myList">
+    </ol>
+    <script>
+      // require('./browser2.js');
+      const { ipcRenderer } = require('electron');
+
+      ipcRenderer.on('browser-two', function (event, args) {
+          console.log(store);
+          let x = document.createElement("LI");
+          let t = document.createTextNode(args.message);
+          x.appendChild(t);
+          document.getElementById("myList").appendChild(x);
+      });
+    </script>
+  </body>
+</html>
