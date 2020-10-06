@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "main": "built/main.js",
     "devDependencies": {
-        "electron": "^9.1.2",
+        "electron": "^9.3.1",
         "typescript": "^3.9.7"
     },
     "scripts": {
